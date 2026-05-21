@@ -78,11 +78,7 @@ export default function Navbar({ isLoggedIn, onAdminClick, onLogout }: NavbarPro
           }
         }}>Contact</a></li>
         <li><a href="/blog">Blog</a></li>
-        <li>
-          <a className="nav-cta" onClick={onAdminClick}>
-            {isLoggedIn ? 'Dashboard' : 'Admin'}
-          </a>
-        </li>
+
       </ul>
 
       <button

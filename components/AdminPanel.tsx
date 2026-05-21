@@ -201,13 +201,13 @@ export default function AdminPanel({ isOpen, onClose, onLogout, posts, onSavePos
   }
 
   return (
-    <div id="admin-panel" className="open" style={{ zIndex: 4000, position: 'fixed', inset: 0, display: 'flex', flexDirection: 'column' }}>
+    <div id="admin-panel" className="admin-page open" style={{ zIndex: 4000, position: 'fixed', inset: 0, display: 'flex', flexDirection: 'column', background: 'var(--white)' }}>
       {/* Topbar */}
       <div className="admin-topbar">
         <h2 style={{ cursor: 'pointer' }} onClick={onClose}>BAH Admin Dashboard</h2>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
           <span style={{ color: 'var(--muted)', fontSize: '0.85rem' }}>👤 Administrator</span>
-          <button className="btn-outline" style={{ padding: '8px 16px', fontSize: '0.8rem' }} onClick={onLogout}>
+          <button className="btn-outline" style={{ padding: '8px 16px', fontSize: '0.8rem', color: 'var(--dark)', borderColor: 'rgba(0,0,0,0.2)' }} onClick={onLogout}>
             Sign Out
           </button>
           <button className="modal-close" style={{ position: 'relative', top: 0, right: 0, fontSize: '1.25rem' }} onClick={onClose}>
@@ -252,13 +252,13 @@ export default function AdminPanel({ isOpen, onClose, onLogout, posts, onSavePos
                   <div className="label">Current Year</div>
                 </div>
               </div>
-              <div style={{ background: 'var(--dark2)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '8px', padding: '1.5rem', maxWidth: '600px' }}>
-                <h4 style={{ marginBottom: '1rem', color: 'var(--white)' }}>Quick Actions</h4>
+              <div style={{ background: 'var(--white)', border: '1px solid rgba(0,0,0,0.1)', boxShadow: '0 2px 10px rgba(0,0,0,0.02)', borderRadius: '8px', padding: '1.5rem', maxWidth: '600px' }}>
+                <h4 style={{ marginBottom: '1rem', color: 'var(--dark)' }}>Quick Actions</h4>
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                   <button className="btn-primary" onClick={() => { clearForm(); setActiveTab('new-post'); }}>
                     + Write New Post
                   </button>
-                  <button className="btn-outline" onClick={() => setActiveTab('manage-posts')}>
+                  <button className="btn-outline" style={{ color: 'var(--dark)', borderColor: 'rgba(0,0,0,0.2)' }} onClick={() => setActiveTab('manage-posts')}>
                     View All Posts
                   </button>
                 </div>
@@ -352,7 +352,7 @@ export default function AdminPanel({ isOpen, onClose, onLogout, posts, onSavePos
                   <button className="btn-primary" onClick={handlePublish} disabled={isPublishing}>
                     {isPublishing ? 'Publishing...' : editingId !== null ? 'Update Post' : 'Publish Post'}
                   </button>
-                  <button className="btn-outline" onClick={clearForm}>
+                  <button className="btn-outline" style={{ color: 'var(--dark)', borderColor: 'rgba(0,0,0,0.2)' }} onClick={clearForm}>
                     Clear Form
                   </button>
                 </div>
