@@ -221,8 +221,8 @@
   }
 
   h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(1.5rem, 4vw, 3.5rem);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: clamp(1.2rem, 3vw, 2.5rem);
     font-weight: 900;
     line-height: 1.05;
     margin-bottom: 1.5rem;
