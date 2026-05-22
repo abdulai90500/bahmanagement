@@ -77,7 +77,6 @@ export default function Navbar({ isLoggedIn, onAdminClick, onLogout }: NavbarPro
             scrollToSection(e, 'contact')
           }
         }}>Contact</a></li>
-        <li><a href="/blog">Blog</a></li>
 
       </ul>
 
