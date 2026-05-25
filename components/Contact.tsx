@@ -65,7 +65,7 @@ export default function Contact() {
             <div className="contact-icon">✉️</div>
             <div className="contact-detail">
               <strong>Email Address</strong>
-              <span>info@bahsolutions.com</span>
+              <span>bahmanagementsolution@gmail.com</span>
             </div>
           </div>
 
